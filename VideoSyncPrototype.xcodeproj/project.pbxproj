@@ -21,6 +21,9 @@
 		FF64DF9D19AF7B42002A38AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF64DF7F19AF7B41002A38AE /* UIKit.framework */; };
 		FF64DFA519AF7B42002A38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF64DFA319AF7B42002A38AE /* InfoPlist.strings */; };
 		FF64DFA719AF7B42002A38AE /* VideoSyncPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF64DFA619AF7B42002A38AE /* VideoSyncPrototypeTests.m */; };
+		FF64DFB119B22C0B002A38AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF64DFB019B22C0B002A38AE /* AVFoundation.framework */; };
+		FF64DFF419B375EF002A38AE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF64DFF319B375EF002A38AE /* MediaPlayer.framework */; };
+		FF64E0ED19B79567002A38AE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF64E0EC19B79567002A38AE /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF60D42C19C1E2BE007A0962 /* SERVICES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SERVICES.h; sourceTree = "<group>"; };
 		FF64DF7819AF7B41002A38AE /* VideoSyncPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoSyncPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF64DF7B19AF7B41002A38AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF64DF7D19AF7B41002A38AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +57,9 @@
 		FF64DFA219AF7B42002A38AE /* VideoSyncPrototypeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VideoSyncPrototypeTests-Info.plist"; sourceTree = "<group>"; };
 		FF64DFA419AF7B42002A38AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF64DFA619AF7B42002A38AE /* VideoSyncPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoSyncPrototypeTests.m; sourceTree = "<group>"; };
+		FF64DFB019B22C0B002A38AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FF64DFF319B375EF002A38AE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		FF64E0EC19B79567002A38AE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF64E0ED19B79567002A38AE /* CoreBluetooth.framework in Frameworks */,
+				FF64DFF419B375EF002A38AE /* MediaPlayer.framework in Frameworks */,
+				FF64DFB119B22C0B002A38AE /* AVFoundation.framework in Frameworks */,
 				FF64DF7E19AF7B41002A38AE /* CoreGraphics.framework in Frameworks */,
 				FF64DF8019AF7B41002A38AE /* UIKit.framework in Frameworks */,
 				FF64DF7C19AF7B41002A38AE /* Foundation.framework in Frameworks */,
@@ -101,6 +111,9 @@
 		FF64DF7A19AF7B41002A38AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF64E0EC19B79567002A38AE /* CoreBluetooth.framework */,
+				FF64DFF319B375EF002A38AE /* MediaPlayer.framework */,
+				FF64DFB019B22C0B002A38AE /* AVFoundation.framework */,
 				FF64DF7B19AF7B41002A38AE /* Foundation.framework */,
 				FF64DF7D19AF7B41002A38AE /* CoreGraphics.framework */,
 				FF64DF7F19AF7B41002A38AE /* UIKit.framework */,
@@ -117,6 +130,7 @@
 				FF64DF8D19AF7B42002A38AE /* Main.storyboard */,
 				FF64DF9019AF7B42002A38AE /* ViewController.h */,
 				FF64DF9119AF7B42002A38AE /* ViewController.m */,
+				FF60D42C19C1E2BE007A0962 /* SERVICES.h */,
 				FF64DF9319AF7B42002A38AE /* Images.xcassets */,
 				FF64DF8219AF7B41002A38AE /* Supporting Files */,
 			);
@@ -199,6 +213,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Conor Linehan";
 				TargetAttributes = {
+					FF64DF7719AF7B41002A38AE = {
+						DevelopmentTeam = 4XXUJG2D9N;
+					};
 					FF64DF9819AF7B42002A38AE = {
 						TestTargetID = FF64DF7719AF7B41002A38AE;
 					};
@@ -376,10 +393,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoSyncPrototype/VideoSyncPrototype-Prefix.pch";
 				INFOPLIST_FILE = "VideoSyncPrototype/VideoSyncPrototype-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +409,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoSyncPrototype/VideoSyncPrototype-Prefix.pch";
 				INFOPLIST_FILE = "VideoSyncPrototype/VideoSyncPrototype-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f1fbdb82-772d-47f6-9557-0e76e3576e82";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -456,6 +479,7 @@
 				FF64DFAC19AF7B42002A38AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF64DFAD19AF7B42002A38AE /* Build configuration list for PBXNativeTarget "VideoSyncPrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +488,7 @@
 				FF64DFAF19AF7B42002A38AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

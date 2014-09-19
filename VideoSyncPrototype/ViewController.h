@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CBCentralManagerDelegate,CBPeripheralManagerDelegate,CBPeripheralDelegate>
+
+@property (nonatomic, strong) MPMoviePlayerController* mc;
+@property (nonatomic, strong) CBCentralManager *centralManager;
+@property (nonatomic, strong) CBPeripheral *discoveredPeripheral;
+@property (nonatomic, strong) CBPeripheralManager *peripheralManager;
+@property (strong, nonatomic) CBMutableCharacteristic *transferCharacteristic;
+
+
+-(IBAction)play;
 
 @end
