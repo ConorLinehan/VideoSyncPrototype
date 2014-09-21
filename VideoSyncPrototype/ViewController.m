@@ -17,6 +17,7 @@
 
 {
     NSURLSession *_backgroundSession;
+    NSURL *_test;
 }
 
 @end

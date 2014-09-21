@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA3A0F90-7781-41B4-843A-E5E6798F1EA3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VideoSyncPrototype</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F91B5F86229F8333C04B21899A950625D4E32E33</key>
+		<string>https://github.com/ConorLinehan/VideoSyncPrototype.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VideoSyncPrototype.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F91B5F86229F8333C04B21899A950625D4E32E33</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ConorLinehan/VideoSyncPrototype.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F91B5F86229F8333C04B21899A950625D4E32E33</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F91B5F86229F8333C04B21899A950625D4E32E33</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VideoSyncPrototype</string>
+		</dict>
+	</array>
+</dict>
+</plist>
