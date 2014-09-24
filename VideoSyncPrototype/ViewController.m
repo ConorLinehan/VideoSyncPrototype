@@ -9,6 +9,9 @@
 // https://s3-eu-west-1.amazonaws.com/videoforaudiosyncvin/VideoVin.mp4
 // https://s3-eu-west-1.amazonaws.com/videosforaudiosyncflo/VideoFlo.mp4
 
+// https://s3-eu-west-1.amazonaws.com/nietbang/leftvideo.mp4
+// https://s3-eu-west-1.amazonaws.com/nietbang/rightvideo.mp4
+
 #import "ViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "SERVICES.h"
@@ -25,8 +28,8 @@
 @implementation ViewController
 
 {
-    NSString *_pathFlo;
-    NSString *_pathVin;
+    NSString *_pathLeft;
+    NSString *_pathRight;
     MPMoviePlayerController *_player;
     NSFileManager *_fileManager;
 }
@@ -50,47 +53,47 @@
     (NSDocumentDirectory, NSUserDomainMask, YES);
     
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    _pathFlo = [documentsDirectory stringByAppendingPathComponent:@"floMovie.mp4"];
-    _pathVin = [documentsDirectory stringByAppendingPathComponent:@"vinMovie.mp4"];
+    _pathLeft = [documentsDirectory stringByAppendingPathComponent:@"VideoLeft.mp4"];
+    _pathRight = [documentsDirectory stringByAppendingPathComponent:@"VideoRight.mp4"];
     
     
     // Handle Downloading
-    NSString *dataurlFlo = @"https://s3-eu-west-1.amazonaws.com/videosforaudiosyncflo/VideoFlo.mp4";
-    NSURL *urlFlo = [NSURL URLWithString:dataurlFlo];
+    NSString *dataurlLeft = @"https://s3-eu-west-1.amazonaws.com/nietbang/leftvideo.mp4";
+    NSURL *urlLeft = [NSURL URLWithString:dataurlLeft];
     
-    NSString *dataurlVin = @"https://s3-eu-west-1.amazonaws.com/videoforaudiosyncvin/VideoVin.mp4";
-    NSURL *urlVin = [NSURL URLWithString:dataurlVin];
+    NSString *dataurlRight = @"https://s3-eu-west-1.amazonaws.com/nietbang/rightvideo.mp4";
+    NSURL *urlRight = [NSURL URLWithString:dataurlRight];
     
-    NSURLSession *sessionFlo = [NSURLSession sharedSession];
-    NSURLSession *sessionVin = [NSURLSession sharedSession];
+    NSURLSession *sessionLeft = [NSURLSession sharedSession];
+    NSURLSession *sessionRight = [NSURLSession sharedSession];
     
-    NSURLSessionDownloadTask *downloadTaskFlo = [ sessionFlo
-                                          downloadTaskWithURL:urlFlo completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+    NSURLSessionDownloadTask *downloadTaskLeft = [ sessionLeft
+                                          downloadTaskWithURL:urlLeft completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
                                               
                                               NSLog(@"Entered data download Flo");
                                               NSData *data = [NSData dataWithContentsOfURL:location];
-                                              [data writeToFile:_pathFlo atomically:YES];
+                                              [data writeToFile:_pathLeft atomically:YES];
                                               
                                           }];
     
     
     
-    [downloadTaskFlo resume];
+    [downloadTaskLeft resume];
     
-    NSURLSessionDownloadTask *downloadTaskVin = [ sessionVin
-                                                 downloadTaskWithURL:urlVin completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+    NSURLSessionDownloadTask *downloadTaskRight = [ sessionRight
+                                                 downloadTaskWithURL:urlRight completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
                                                      
                                                      NSLog(@"Entered data download Vin");
                                                      NSData *data = [NSData dataWithContentsOfURL:location];
-                                                     [data writeToFile:_pathVin atomically:YES];
+                                                     [data writeToFile:_pathRight atomically:YES];
                                                      
                                                  }];
     
     
     
-    [downloadTaskVin resume];
+    [downloadTaskRight resume];
     
-    NSLog(@"%@",_pathVin);
+    NSLog(@"%@",_pathRight);
     
     
     
@@ -108,12 +111,12 @@
     [_centralManager stopScan];
 }
 
--(void)playMovieFlo;
+-(void)playMovieLeft;
 {
     
-    if ([_fileManager fileExistsAtPath:_pathFlo]) {
+    if ([_fileManager fileExistsAtPath:_pathLeft]) {
     
-    NSURL *url = [NSURL fileURLWithPath:_pathFlo];
+    NSURL *url = [NSURL fileURLWithPath:_pathLeft];
     
    // NSURL *url = [NSURL URLWithString:@"https://s3-eu-west-1.amazonaws.com/videosforaudiosyncflo/VideoFlo.mp4"];
     
@@ -136,11 +139,11 @@
     
 }
 
--(void)playMovieVin
+-(void)playMovieRight
 {
-    if ([_fileManager fileExistsAtPath:_pathVin]) {
+    if ([_fileManager fileExistsAtPath:_pathRight]) {
         
-        NSURL *url = [NSURL fileURLWithPath:_pathVin];
+        NSURL *url = [NSURL fileURLWithPath:_pathRight];
         
         
         
@@ -219,7 +222,7 @@
         [peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]] forService:service];
     }
     // Discover other characterstics
-    [self playMovieVin];
+    [self playMovieRight];
 }
 
 -(void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
@@ -283,12 +286,12 @@
 {
     NSLog(@"Should play flo");
     
-    [self playMovieFlo];
+    [self playMovieLeft];
 }
 
 -(void)peripheralManagerIsReadyToUpdateSubscribers:(CBPeripheralManager *)peripheral
 {
-    [self playMovieFlo];
+    [self playMovieLeft];
 }
 
 
